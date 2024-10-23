@@ -1,0 +1,9 @@
+Web fundamentals exam result
+
+№	First name	    Last name	    Score
+01	Gunnar	        Gustavsson	    500
+02	Teddy	        Grant	        500
+03	Magnus	        Persson	        500
+04	Lina	        Andersson	    500
+05	Mel	            Gibson	        500
+Average score from 05 participants: 500
