@@ -46,8 +46,8 @@ console.log(rect.calcArea());   // 20
     The toString() method should return a string.
     Submit the class definition as is, without wrapping it in any function.
 */
-class Person {
-    constructor(firstName, lastName, age, email) {
+class Person3 {
+    constructor(firstName = "", lastName = "", age = "", email = "") {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -56,6 +56,46 @@ class Person {
 
     toString() {
         return `${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`;
+    }
+}
+
+class Person2 {
+    constructor(firstName, lastName, age, email) {
+        this.firstName = firstName || '';
+        this.lastName = lastName || '';
+        this.age = age || '';
+        this.email = email || '';
+    }
+
+    toString() {
+        return `${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`;
+    }
+}
+
+class Person3 {
+    constructor(firstName, lastName, age, email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+    }
+
+    toString() {
+
+        let fullName = [this.firstName, this.lastName].filter(x => x).join(' ');
+        if (this.age === undefined && this.email === undefined) {
+            return fullName;
+        }
+        let result = `${fullName} (`;
+        if (this.age !== undefined) {
+            result += `age: ${this.age}`;
+        }
+        if (this.email !== undefined) {
+            result += `, email: ${this.email}`;
+        }
+        result += ')';
+
+        return result;
     }
 }
 
